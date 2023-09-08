@@ -2,10 +2,7 @@ import requests
 from config import IP_CHECK_URL
 
 def get_public_ip():
-    """
-    Function to return response.text
-    # get the public IP
-    """
+
     try:
         response = requests.get(IP_CHECK_URL)
         response.raise_for_status()
@@ -15,9 +12,7 @@ def get_public_ip():
         return None
 
 def has_ip_changed(old_ip):
-    """
-    Function to check if the IP has changed
-    """
+
     new_ip = get_public_ip()
     if new_ip is None:
         return False, old_ip

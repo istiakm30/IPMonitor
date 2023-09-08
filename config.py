@@ -1,5 +1,3 @@
-# config.py
-
 # Time interval for checking the internet connection in seconds
 CHECK_INTERVAL = 5
 
